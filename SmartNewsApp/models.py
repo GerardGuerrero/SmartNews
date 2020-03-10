@@ -30,4 +30,4 @@ class News(models.Model):
     description = models.TextField()
     publishedAt = models.ForeignKey('Date', on_delete=models.CASCADE)
     content = models.TextField()
-    topics = models.ManyToManyField('Topic', related_name='name')
+    topics = models.ManyToManyField('Topic', related_name='news')
