@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.blog.models import News, Source, Topic, Country, Date, Statistic
+from SmartNewsApp.models import News, Source, Topic, Country, Date, Statistic
 
 class NewsAdmin(admin.ModelAdmin):
  	pass
