@@ -122,8 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # Built-in User Authentication System
-LOGIN_REDIRECT_URL = '/authentication'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'account'
+LOGOUT_REDIRECT_URL = 'home'
 AUTH_USER_MODEL = 'authentication.User'
 AUTHENTICATION_BACKENDS = (
  	'django.contrib.auth.backends.AllowAllUsersModelBackend',
