@@ -3,7 +3,29 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
- <div class="jumbotron">
- 	Home page
- </div>
+<div class="bg" align="center">
+    {% load static %}
+      <img src = "{% static 'home/news-logo.png' %}" height="200">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" align="center">
+      <h3>Look for your topic!</h3>
+      {% load static %}
+        <img src = "{% static 'home/topic-icon.png' %}" class="rounded-circle" width="300">
+      <p>With this functionality you will be able to search news of a topic from different newspapers</p>
+    </div>
+    <div class="col-sm-0 col-sm-offset-2"></div>
+    <div class="col-sm-4" align="center">
+      <h3>Fake news!</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4" align="center">
+      <h3>Column 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
