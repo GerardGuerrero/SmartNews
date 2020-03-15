@@ -5,26 +5,30 @@
 {% block content %}
 <div class="bg" align="center">
     {% load static %}
-      <img src = "{% static 'home/news-logo.png' %}" height="200">
+      <img src = "{% static 'home/news-logo.png' %}" height="300" width="900">
 </div>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-4" align="center">
-      <h3>Look for your topic!</h3>
+      <h3 class="font-weight-bold">Look for your topic!</h3>
       {% load static %}
         <img src = "{% static 'home/topic-icon.png' %}" class="rounded-circle" width="300">
-      <p>With this functionality you will be able to search news of a topic from different newspapers</p>
-    </div>
-    <div class="col-sm-0 col-sm-offset-2"></div>
-    <div class="col-sm-4" align="center">
-      <h3>Fake news!</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p class="text-break">For sure you've always wanted to search which news talk about the same thing.
+        So here you are, with this functionality you will be able to search news of a topic from different newspapers.</p>
     </div>
     <div class="col-sm-4" align="center">
-      <h3>Column 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <h3 class="font-weight-bold">Fake news!</h3>
+      {% load static %}
+        <img src = "{% static 'home/fake-news.png' %}" class="rounded-circle" width="300">
+      <p class="text-break">Nowadays people trust less with the information posted on the Internet due to newspapers' information that is not exactly truly.
+        So we check out which news are fake due to different content from different newspapers.</p>
+    </div>
+    <div class="col-sm-4" align="center">
+      <h3 class="font-weight-bold">Influence of news!</h3>
+      {% load static %}
+        <img src = "{% static 'home/news-influence.png' %}" class="rounded-circle" width="300">
+      <p class="text-break">If you want to look for the impact that a news have had during this month, for example, you are in the right place.
+        Here we look for the influene of news in different countries in a specific period of time.</p>
     </div>
   </div>
 </div>
