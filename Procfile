@@ -1,1 +1,1 @@
-web: gunicorn SmartNewsProject.wsgi #--log-file-
+web: gunicorn SmartNewsProject.wsgi
