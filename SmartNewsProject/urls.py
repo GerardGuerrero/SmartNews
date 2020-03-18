@@ -22,4 +22,4 @@ urlpatterns = [
     path('account/', include('authentication.urls')),
     path('functionalities/', include('SmartNewsApp.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-]
+    ]
