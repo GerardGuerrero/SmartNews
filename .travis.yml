@@ -7,3 +7,12 @@ install:
 
 script:
   - python manage.py test apps
+
+"""deploy:
+  provider: heroku
+  api_key:
+    secure: ???
+  app: smart-news-app
+  on:
+    repo: GerardGuerrero/SmartNews
+    branch: master"""
