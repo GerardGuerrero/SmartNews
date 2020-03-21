@@ -2,9 +2,9 @@ FROM python:
 
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /APP
+WORKDIR /app
 
-ADD . /APP
+ADD . /app
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
