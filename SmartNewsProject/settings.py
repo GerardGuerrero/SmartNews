@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 #DEBUG = True
 DEBUG = int(os.getenv('DJANGO_DEBUG'))
 
-ALLOWED_HOSTS = ['smart-news-app.herokuapp.com','*']
+ALLOWED_HOSTS = ['smart-news-application.herokuapp.com','*']
 #ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS')
 
 
