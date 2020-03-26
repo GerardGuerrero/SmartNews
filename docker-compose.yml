@@ -5,11 +5,13 @@ services:
     build: .
     container_name: smartnews
     restart: unless-stopped
+    env_file:
+      - .env
     volumes:
       - .:/app
       - /static:/static
     ports:
-      - "8000:8000"
+      - "8000:${DJANGO_PORT}"
     depends_on:
       - db
     command: bash -c "python manage.py collectstatic --no-input && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
@@ -18,5 +20,7 @@ services:
     image: keinos/sqlite3:latest
     container_name: sqlitecontainer
     restart: unless-stopped
+    volumes:
+      - ./db/:/root/db/
     expose:
       - "5432"
