@@ -25,7 +25,7 @@ SECRET_KEY = 'w#a4fl5k3ztc&1d8$7co&38x_org7(g^@g2pm3v)h0__qd#)#*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['smart-news-app.herokuapp.com','*']
+ALLOWED_HOSTS = ['smart-news-app.herokuapp.com','*', 'smart-news.herokuapp.com']
 
 
 # Application definition

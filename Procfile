@@ -1,2 +1,2 @@
 python manage.py migrate
-web: gunicorn SmartNewsProject.wsgi
+web: gunicorn SmartNewsProject.wsgi --log-file-
