@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 #SECRET_KEY = 'w#a4fl5k3ztc&1d8$7co&38x_org7(g^@g2pm3v)h0__qd#)#*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #DEBUG = int(os.getenv('DJANGO_DEBUG'))
 
 ALLOWED_HOSTS = ['smart-news-application.herokuapp.com','*']
