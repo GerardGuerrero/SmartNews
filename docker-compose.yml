@@ -20,7 +20,5 @@ services:
     image: keinos/sqlite3:latest
     container_name: sqlitecontainer
     restart: unless-stopped
-    volumes:
-      - ./db/:/root/db/
     expose:
       - "5432"
