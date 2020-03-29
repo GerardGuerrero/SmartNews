@@ -2,12 +2,14 @@
 
 Smart News application developed using Django, including for the moment:
 
-  * ***Authentication.*** *an app that uses the powerful built-in user authentication system that allows you to quickly and easily add login, logout, and registration functionalities to a website.*
-  * ***SmartNewsApp.*** *the main app of the project. It hosts the definition of models (Date, Source, Country, Topic, Statistic and News) and templates.*
+  * ***Authentication:*** *an app that uses the powerful built-in user authentication system that allows you to quickly and easily add login, logout, and registration functionalities to a website.*
+  * ***SmartNewsApp:*** *the main app of the project. It hosts the definition of models (Date, Source, Country, Topic, Statistic and News) and templates.*
 
 The project is developed adhering as much as possible the ***12 factor guidelines***.
 
 The source code for this project is available from: https://github.com/GerardGuerrero/SmartNews
+
+https://travis-ci.org/GerardGuerrero/SmartNews.svg?branch=master
 
 ## Prerequisites and important information for the evaluation
 
