@@ -4,15 +4,12 @@ python:
 
 install:
   - pip install -r requirements.txt
-
 script:
-  - python manage.py test apps
-
-"""deploy:
+- python manage.py test
+deploy:
   provider: heroku
-  api_key:
-    secure: ???
-  app: smart-news-app
+  api_key: 218e2b64-34c4-4e9f-a8b4-ee3b9fd049ac
+  app: smart-news-application
   on:
     repo: GerardGuerrero/SmartNews
-    branch: master"""
+    branch: master
