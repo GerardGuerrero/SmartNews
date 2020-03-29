@@ -76,17 +76,17 @@ https://smart-news-application.herokuapp.com
 
 In all cases, to test how superuser works, the access credentials are:
 
-```
+
 * user: admin
 * password: admin
-```
+
 
 And in order to try how a simple user interact, you can login with these others:
 
-```
+
 * user: ferran
 * password: 12345verdes
-```
+
 
 You can also create new users in all cases.
 
@@ -113,4 +113,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](SmartNews.LICENSE) file for details
