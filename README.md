@@ -2,8 +2,8 @@
 
 Smart News application developed using Django, including for the moment:
 
-  * Authentication
-  * SmartNewsApp
+  * ***Authentication***
+  * ***SmartNewsApp***
 
 The project is developed adhering as much as possible the 12 factor guidelines.
 
@@ -13,13 +13,9 @@ The source code for this project is available from: https://github.com/GerardGue
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Prerequisites ???
+## Prerequisites and important information for the evaluation
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+In order to allow the evaluation of the project delivery, a new branch has been developed infringing some rules that they could not be breached in *master* branch. This new branch is ***first-assigment-evaluation***.
 
 ## How to run or deploy SmartNewsApp application
 
@@ -29,12 +25,17 @@ Explain how to run the automated tests for this system
 
 ```
 docker-compose up --build
+```
 
+In order to evaluate the project, you need to access *fisrt-assigment-evaluation* branch:
+
+```
+git checkout first-assigment-evaluation
 ```
 
 ### Running SmartNewsApp application on local host
 
-First of all, you need to go to the project main directory (e.g. SmartNews):
+First of all, you need to go to the project main directory (e.g. *SmartNews*):
 
 ```
 $ cd SmartNews
@@ -42,19 +43,19 @@ $ cd SmartNews
 
 Then, you have to activate de virtual environment:
 
-Linux
-```
-$ source venv/bin/activate
-```
+* Linux
+  ```
+  $ source venv/bin/activate
+  ```
 
-Windows
-```
-cd venv
-.\Scripts\activate
-cd ..
-```
+* Windows
+  ```
+  cd venv
+  .\Scripts\activate
+  cd ..
+  ```
 
-Also in this case, in order to evaluate the project, you need to access fisrt-assigment-evaluation branch:
+Also in this case, in order to evaluate the project, you need to access *fisrt-assigment-evaluation* branch:
 
 ```
 git checkout first-assigment-evaluation
@@ -77,15 +78,15 @@ https://smart-news-application.herokuapp.com
 In all cases, to test how superuser works, the access credentials are:
 
 
-* user: admin
-* password: admin
+* *user*: ***admin***
+* *password*: ***admin***
 
 
 And in order to try how a simple user interact, you can login with these others:
 
 
-* user: ferran
-* password: 12345verdes
+* *user*: ***ferran***
+* *password*: ***12345verdes***
 
 
 You can also create new users in all cases.
