@@ -1,87 +1,113 @@
 # SmartNews
 
-One Paragraph of project description goes here
+Smart News application developed using Django, including for the moment:
 
-## Getting Started
+  * ***Authentication:*** *an app that uses the powerful built-in user authentication system that allows you to quickly and easily add login, logout, and registration functionalities to a website.*
+  * ***SmartNewsApp:*** *the main app of the project. It hosts the definition of models (Date, Source, Country, Topic, Statistic and News) and templates.*
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The project is developed adhering as much as possible the ***12 factor guidelines***.
 
-### Prerequisites
+The source code for this project is available from: https://github.com/GerardGuerrero/SmartNews
 
-What things you need to install the software and how to install them
+[![Build Status](https://travis-ci.org/GerardGuerrero/SmartNews.svg?branch=master)](https://travis-ci.org/GerardGuerrero/SmartNews)
 
-```
-Give examples
-```
+## Prerequisites and important information for the evaluation
 
-### Installing
+In order to allow the evaluation of the project delivery, a new branch has been developed infringing some rules that they could not be breached in *master* branch. This new branch is ***first-assigment-evaluation***.
 
-A step by step series of examples that tell you how to get a development env running
+## How to run or deploy SmartNewsApp application
 
-Say what the step will be
+### Running SmartNewsApp application with Docker
 
-```
-Give the example
-```
-
-And repeat
+If you want to run the application with Docker, you should execute the following command:
 
 ```
-until finished
+docker-compose up --build
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+*(In case of not having the necessary permissions, it would be necessary to put the word* ***sudo*** *before)*
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+In order to evaluate the project, you need to access *fisrt-assigment-evaluation* branch:
 
 ```
-Give an example
+git checkout first-assigment-evaluation
 ```
 
-### And coding style tests
+### Running SmartNewsApp application on local host
 
-Explain what these tests test and why
+First of all, you need to go to the project main directory (e.g. *SmartNews*):
 
 ```
-Give an example
+$ cd SmartNews
 ```
 
-## Deployment
+Then, you have to activate de virtual environment:
 
-Add additional notes about how to deploy this on a live system
+* *Linux*
+  ```
+  $ source venv/bin/activate
+  ```
+
+* *Windows*
+  ```
+  cd venv
+  .\Scripts\activate
+  cd ..
+  ```
+
+Also in this case, in order to evaluate the project, you need to access *fisrt-assigment-evaluation* branch:
+
+```
+git checkout first-assigment-evaluation
+```
+
+And finally you can run the server using:
+
+```
+python manage.py runserver
+```
+
+### Deploying SmartNewsApp application on Heroku
+
+In order to deploy the app on Heroky, you just have to follow this link:
+https://smart-news-application.herokuapp.com
+
+
+## How to check authentication required functions
+
+In all cases, to test how superuser works, the access credentials are:
+
+
+* *user*: ***admin***
+* *password*: ***admin***
+
+
+And in order to try how a simple user interact, you can login with these others:
+
+
+* *user*: ***ferran***
+* *password*: ***12345verdes***
+
+
+You can also create new users in all cases.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Django](https://docs.djangoproject.com/en/3.0/) - The web framework used
+* [Travis CI](https://docs.travis-ci.com/) - Continuous Integration
+* [Heroku](https://devcenter.heroku.com/) - PaaS used to deploy the app
 
-## Contributing
+## Version control
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [GitHub](https://github.com/) for development version control using Git.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Rafa Cucurull** - [RafaCucurull](https://github.com/RafaCucurull)
+* **Ivan Cortés** - [ivancg98](https://github.com/ivancg98)
+* **Gerard Guerrero** - [GerardGuerrero](https://github.com/GerardGuerrero)
+* **Robert Torres** - [TorresTosquella](https://github.com/TorresTosquella)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
