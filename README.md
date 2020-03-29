@@ -2,16 +2,12 @@
 
 Smart News application developed using Django, including for the moment:
 
-  * ***Authentication***
-  * ***SmartNewsApp***
+  * ***Authentication.*** *an app that uses the powerful built-in user authentication system that allows you to quickly and easily add login, logout, and registration functionalities to a website.*
+  * ***SmartNewsApp.*** *the main app of the project. It hosts the definition of models (Date, Source, Country, Topic, Statistic and News) and templates.*
 
-The project is developed adhering as much as possible the 12 factor guidelines.
+The project is developed adhering as much as possible the ***12 factor guidelines***.
 
 The source code for this project is available from: https://github.com/GerardGuerrero/SmartNews
-
-## Getting Started ???
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Prerequisites and important information for the evaluation
 
@@ -21,11 +17,13 @@ In order to allow the evaluation of the project delivery, a new branch has been 
 
 ### Running SmartNewsApp application with Docker
 
-Explain how to run the automated tests for this system
+If you want to run the application with Docker, you should execute the following command:
 
 ```
 docker-compose up --build
 ```
+
+*(In case of not having the necessary permissions, it would be necessary to put the word* ***sudo*** *before)*
 
 In order to evaluate the project, you need to access *fisrt-assigment-evaluation* branch:
 
@@ -43,12 +41,12 @@ $ cd SmartNews
 
 Then, you have to activate de virtual environment:
 
-* Linux
+* *Linux*
   ```
   $ source venv/bin/activate
   ```
 
-* Windows
+* *Windows*
   ```
   cd venv
   .\Scripts\activate
@@ -61,7 +59,7 @@ Also in this case, in order to evaluate the project, you need to access *fisrt-a
 git checkout first-assigment-evaluation
 ```
 
-And finaly you can run the server using:
+And finally you can run the server using:
 
 ```
 python manage.py runserver
@@ -94,12 +92,12 @@ You can also create new users in all cases.
 ## Built With
 
 * [Django](https://docs.djangoproject.com/en/3.0/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Travis CI](https://docs.travis-ci.com/) - Continuous Integration
+* [Heroku](https://devcenter.heroku.com/) - PaaS used to deploy the app
 
-## Versioning
+## Version control
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [GitHub](https://github.com/) for development version control using Git.
 
 ## Authors
 
