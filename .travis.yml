@@ -8,7 +8,8 @@ script:
 - python manage.py test
 deploy:
   provider: heroku
-  api_key: 04adb859-23c4-4687-b874-506cb00fb5e3
+  api_key:
+    secure: 04adb859-23c4-4687-b874-506cb00fb5e3
   app: personal-website-example
   on:
     repo: GerardGuerrero/SmartNews
