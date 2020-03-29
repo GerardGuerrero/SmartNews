@@ -76,13 +76,17 @@ https://smart-news-application.herokuapp.com
 
 In all cases, to test how superuser works, the access credentials are:
 
+```
 * user: admin
 * password: admin
+```
 
 And in order to try how a simple user interact, you can login with these others:
 
+```
 * user: ferran
 * password: 12345verdes
+```
 
 You can also create new users in all cases.
 
