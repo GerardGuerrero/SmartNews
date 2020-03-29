@@ -13,7 +13,7 @@ The source code for this project is available from: https://github.com/GerardGue
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites ???
+## Prerequisites ???
 
 What things you need to install the software and how to install them
 
@@ -21,9 +21,9 @@ What things you need to install the software and how to install them
 Give examples
 ```
 
-### How to run or deploy SmartNewsApp application
+## How to run or deploy SmartNewsApp application
 
-## Running SmartNewsApp application with Docker
+### Running SmartNewsApp application with Docker
 
 Explain how to run the automated tests for this system
 
@@ -32,7 +32,7 @@ docker-compose up --build
 
 ```
 
-## Running SmartNewsApp application on local host
+### Running SmartNewsApp application on local host
 
 First of all, you need to go to the project main directory (e.g. SmartNews):
 
@@ -66,13 +66,13 @@ And finaly you can run the server using:
 python manage.py runserver
 ```
 
-## Deploying SmartNewsApp application on Heroku
+### Deploying SmartNewsApp application on Heroku
 
 In order to deploy the app on Heroky, you just have to follow this link:
 https://smart-news-application.herokuapp.com
 
 
-### How to check authentication required functions
+## How to check authentication required functions
 
 In all cases, to test how superuser works, the access credentials are:
 
@@ -89,10 +89,6 @@ And in order to try how a simple user interact, you can login with these others:
 
 
 You can also create new users in all cases.
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -113,4 +109,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](SmartNews.LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
