@@ -8,11 +8,11 @@ install:
 script:
   - python manage.py test apps
 
-"""deploy:
+deploy:
   provider: heroku
   api_key:
-    secure: ???
+    secure: 04adb859-23c4-4687-b874-506cb00fb5e3
   app: smart-news-app
   on:
     repo: GerardGuerrero/SmartNews
-    branch: master"""
+    branch: master
