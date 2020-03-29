@@ -9,7 +9,7 @@ The project is developed adhering as much as possible the ***12 factor guideline
 
 The source code for this project is available from: https://github.com/GerardGuerrero/SmartNews
 
-https://travis-ci.org/GerardGuerrero/SmartNews.svg?branch=master
+[![Build Status](https://travis-ci.org/GerardGuerrero/SmartNews.svg?branch=master)](https://travis-ci.org/GerardGuerrero/SmartNews)
 
 ## Prerequisites and important information for the evaluation
 
