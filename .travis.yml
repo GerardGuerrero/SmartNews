@@ -9,7 +9,7 @@ script:
 deploy:
   provider: heroku
   api_key: 218e2b64-34c4-4e9f-a8b4-ee3b9fd049ac
-  app: personal-website-example
+  app: smart-news-application
   on:
     repo: GerardGuerrero/SmartNews
     branch: master
