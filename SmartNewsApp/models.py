@@ -4,7 +4,7 @@ class Date(models.Model):
     date = models.CharField(max_length=50)
 
 class Source(models.Model):
-    code = models.CharField(max_length = 25, help_text='Enter source identification')
+    code = models.CharField(max_length = 25)
     name = models.CharField(max_length = 25)
     description = models.TextField()
     category = models.CharField(max_length = 20)
@@ -31,3 +31,9 @@ class News(models.Model):
     publishedAt = models.ForeignKey('Date', on_delete=models.CASCADE)
     content = models.TextField()
     topics = models.ManyToManyField('Topic', related_name='news')
+
+class Comment(models.Model):
+    code = models.CharField(max_length = 10)
+    title = models.CharField(max_length = 25, help_text='Enter a title for your comment')
+    description = models.TextField(help_text='Type your comment')
+    news = models.ForeignKey('Source', on_delete=models.CASCADE)
