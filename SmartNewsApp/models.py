@@ -33,7 +33,7 @@ class News(models.Model):
     topics = models.ManyToManyField('Topic', related_name='news')
 
 class Comment(models.Model):
-    code = models.CharField(max_length = 10)
     title = models.CharField(max_length = 25, help_text='Enter a title for your comment')
-    description = models.TextField(help_text='Type your comment')
+    code = models.CharField(max_length = 10)
+    content = models.TextField(help_text='Type your comment')
     news = models.ForeignKey('Source', on_delete=models.CASCADE)

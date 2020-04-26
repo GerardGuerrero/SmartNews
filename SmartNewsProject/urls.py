@@ -24,7 +24,11 @@ urlpatterns = [
     path('account/', include('authentication.urls')),
     path('functionalities/', include('SmartNewsApp.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
+
+    #NEW LOGIN/LOGOUT (Tutorials Roberto) - Revisar si cal afegir-ho
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(), name='logout'),
+    ####
+
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     #PROVA1
