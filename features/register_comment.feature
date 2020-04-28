@@ -9,9 +9,9 @@ Feature: Register Comment
   Scenario:
     Given I login as user "user" with password "password"
     When I register comment
-      | text        |
-      | opinion  |
+      | description |
+      | hola |
     Then I'm viewing the details page for comment by "user"
-      | text        |
-      | opinion  |
+      | description |
+      | hola |
     And There are 1 comments
