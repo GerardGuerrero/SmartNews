@@ -1,5 +1,5 @@
 from django.contrib import admin
-from SmartNewsApp.models import News, Source, Topic, Country, Date, Statistic
+from SmartNewsApp.models import News, Source, Topic, Country, Date, Statistic, Comment
 
 class NewsAdmin(admin.ModelAdmin):
  	pass
@@ -19,9 +19,13 @@ class DateAdmin(admin.ModelAdmin):
 class StatisticAdmin(admin.ModelAdmin):
  	pass
 
+class CommentAdmin(admin.ModelAdmin):
+ 	pass
+
 admin.site.register(News, NewsAdmin)
 admin.site.register(Source, SourceAdmin)
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(Country, CountryAdmin)
 admin.site.register(Date, DateAdmin)
 admin.site.register(Statistic, StatisticAdmin)
+admin.site.register(Comment, CommentAdmin)

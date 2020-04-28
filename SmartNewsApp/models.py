@@ -14,6 +14,9 @@ class Source(models.Model):
 class Country(models.Model):
     country_code = models.CharField(max_length=25)
 
+class Comment(models.Model):
+    description = models.TextField()
+
 class Topic(models.Model):
     name = models.CharField(max_length=25)
 

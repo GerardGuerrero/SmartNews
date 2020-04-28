@@ -6,12 +6,12 @@ Feature: Register Comment
   Background: There is a registered user
       Given Exists a user "user" with password "password"
 
-    Scenario: Register just comment text
-      Given I login as user "user" with password "password"
-      When I register Comment
-        | text     |
-        | myopinion |
-      Then I'm viewing the details page for comment by "user"
-        | text    |
-        | myopinion |
-      And There are 1 comments
+  Scenario:
+    Given I login as user "user" with password "password"
+    When I register comment
+      | text        |
+      | opinion  |
+    Then I'm viewing the details page for comment by "user"
+      | text        |
+      | opinion  |
+    And There are 1 comments
