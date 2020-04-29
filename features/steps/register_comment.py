@@ -21,7 +21,7 @@ def step_impl(context, user):
     comment = Comment.objects.filter(reduce(operator.and_, q_list)).get()
     assert context.browser.url == context.get_url(comment)
 
-@then(u'There are {count:n} restaurants')
+@then(u'There are {count:n} comments')
 def step_impl(context, count):
     from SmartNewsApp.models import Comment
     assert count == Comment.objects.count()
