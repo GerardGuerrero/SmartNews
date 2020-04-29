@@ -5,5 +5,8 @@
 {% block content %}
 <h1>
     {{ comment.description }}
+    {% if user == comment.user %}
+        (<a href="{% url 'comment_edit' comment.id %}">edit</a>)
+    {% endif %}
 </h1>
 {% endblock %}

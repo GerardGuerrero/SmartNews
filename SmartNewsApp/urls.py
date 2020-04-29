@@ -4,7 +4,9 @@ from django.views.generic.edit import CreateView
 from SmartNewsApp.forms import CommentForm
 from SmartNewsApp.models import Comment
 from django.views.generic.detail import DetailView
+from django.views.generic import ListView
 from SmartNewsApp.views import LoginRequiredCheckIsOwnerUpdateView
+from django.utils import timezone
 
 urlpatterns = [
  	path('', TemplateView.as_view(template_name='funcHome.html'), name='func'),
@@ -29,4 +31,12 @@ urlpatterns = [
             model=Comment,
             form_class=CommentForm),
         name='comment_edit'),
+
+    #Llistar els 5 últims comentaris
+    path('comment_list/',
+        ListView.as_view(
+            queryset=Comment.objects.filter(date__lte=timezone.now()).order_by('date')[:10],
+            context_object_name='latest_comment_list',
+            template_name='comment_list.html'),
+        name='comment_list'),
 ]

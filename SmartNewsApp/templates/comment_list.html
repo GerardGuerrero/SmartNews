@@ -1,0 +1,15 @@
+{% extends 'baseAPP.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>
+    Comments
+    {% if user.is_authenticated %}(<a href="{% url 'comment_create' %}">add</a>){% endif %}
+</h1>
+<ul>
+    {% for comment in latest_comment_list %}
+        <li><a href="{% url 'comment_detail' comment.id %}">
+            {{ comment.description }}</a></li>
+    {% empty %}<li>Sorry, no comments registered yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
