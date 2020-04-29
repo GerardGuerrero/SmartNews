@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls.base import reverse
+from authentication.models import User
 
 class Date(models.Model):
     date = models.CharField(max_length=50)
@@ -17,6 +18,7 @@ class Country(models.Model):
 
 class Comment(models.Model):
     description = models.TextField()
+    user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     def get_absolute_url(self):
         return reverse('comment_detail', kwargs={'pk': self.pk})
 
