@@ -9,12 +9,7 @@ Background: There are registered users and a restaurant by one of them
     | description |
     | comentari   |
 
-Scenario: Delete owned comment description
+Scenario:
   Given I login as user "user1" with password "password"
-  When I edit the comment with description "comentari"
-    | description        |
-    | comentari editat   |
-  Then I'm viewing the details page for comment by "user1"
-    | description        |
-    | comentari editat   |
-  And There are 1 comments
+  When I delete the comment with description "comentari"
+  Then There are 0 comments
