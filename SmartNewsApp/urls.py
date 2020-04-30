@@ -42,4 +42,5 @@ urlpatterns = [
         name='comment_list'),
 
     path('comment/<int:pk>/delete', views.CommentDeleteView.as_view(), name='delete_comment'),
+    path('news/', views.topnews, name='news'),
 ]
