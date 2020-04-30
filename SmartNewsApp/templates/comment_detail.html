@@ -6,7 +6,10 @@
 <h1>
     {{ comment.description }}
     {% if user == comment.user %}
-        (<a href="{% url 'comment_edit' comment.id %}">edit</a>)
+        (<a href="{% url 'comment_edit' comment.id %}"><button>edit</button></a>)
+    {% endif %}
+    {% if user == comment.user %}
+        (<a href="{% url 'delete_comment' comment.id %}"><button>delete</button></a>)
     {% endif %}
 </h1>
 {% endblock %}

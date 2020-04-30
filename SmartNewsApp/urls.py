@@ -7,6 +7,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic import ListView
 from SmartNewsApp.views import LoginRequiredCheckIsOwnerUpdateView
 from django.utils import timezone
+from SmartNewsApp import views
 
 urlpatterns = [
  	path('', TemplateView.as_view(template_name='funcHome.html'), name='func'),
@@ -39,4 +40,6 @@ urlpatterns = [
             context_object_name='latest_comment_list',
             template_name='comment_list.html'),
         name='comment_list'),
+
+    path('comment/<int:pk>/delete', views.CommentDeleteView.as_view(), name='delete_comment'),
 ]

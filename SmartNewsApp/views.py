@@ -1,12 +1,12 @@
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView, UpdateView
-
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.http import Http404
 from SmartNewsApp.models import Comment
 from SmartNewsApp.forms import CommentForm
 
@@ -24,3 +24,7 @@ class CheckIsOwnerMixin(object):
 
 class LoginRequiredCheckIsOwnerUpdateView(LoginRequiredMixin, CheckIsOwnerMixin, UpdateView):
     template_name = 'comments.html'
+
+class CommentDeleteView(DeleteView):
+    model = Comment
+    success_url = reverse_lazy('func')

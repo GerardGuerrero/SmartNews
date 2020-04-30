@@ -1,7 +1,7 @@
-Feature: Edit Comment
-  In order to keep updated my previous comments
+Feature: Delete Comment
+  In order to delete my previous comments
   As a user
-  I want to edit a comment register I created
+  I want to delete a comment register I created
 
 Background: There are registered users and a restaurant by one of them
   Given Exists a user "user1" with password "password"
@@ -9,7 +9,7 @@ Background: There are registered users and a restaurant by one of them
     | description |
     | comentari   |
 
-Scenario: Edit owned comment description
+Scenario: Delete owned comment description
   Given I login as user "user1" with password "password"
   When I edit the comment with description "comentari"
     | description        |
