@@ -36,5 +36,7 @@ def topnews(request):
     news = response.json()
     return render(request, 'news.html', {
         'title': news['articles'][0]['title'],
-        'description': news['articles'][0]['description']
+        'description': news['articles'][0]['description'],
+        'title2': news['articles'][1]['title'],
+        'description2': news['articles'][1]['description']
     })
