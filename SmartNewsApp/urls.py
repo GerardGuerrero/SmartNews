@@ -11,7 +11,7 @@ from SmartNewsApp import views
 
 urlpatterns = [
  	path('', TemplateView.as_view(template_name='funcHome.html'), name='func'),
-    path('service1/', TemplateView.as_view(template_name='func1.html'), name='service1'),
+    path('sources/', TemplateView.as_view(template_name='sources.html'), name='sources'),
     path('service2/', TemplateView.as_view(template_name='func2.html'), name='service2'),
     #Crear restaurants
     path('service3/',
@@ -43,4 +43,8 @@ urlpatterns = [
 
     path('comment/<int:pk>/delete', views.CommentDeleteView.as_view(), name='delete_comment'),
     path('news/', views.topnews, name='news'),
+    path('sources/', views.sources, name='sources'),
+    path('sources/BBC/', views.newsBBC, name='BBC'),
+    path('sources/USATODAY/', views.newsUSATODAY, name='USATODAY'),
+    path('sources/GoogleNews/', views.newsGoogleNews, name='GoogleNews'),
 ]

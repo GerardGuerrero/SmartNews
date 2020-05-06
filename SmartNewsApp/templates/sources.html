@@ -1,0 +1,14 @@
+{% extends 'baseAPP.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+ <h1>Top headlines from sources</h1>
+ <p>In this section you can select from several newspapers the most important news of today</p>
+ <br></br>
+ <ul>
+ <li><a class="button" href="{% url 'BBC' %}">BBC</a></li>
+ <li><a class="button" href="{% url 'USATODAY' %}">USA TODAY</a></li>
+ <li><a class="button" href="{% url 'GoogleNews' %}">Google News</a></li>
+ </ul>
+{% endblock %}

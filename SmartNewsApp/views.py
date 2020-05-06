@@ -11,6 +11,8 @@ from SmartNewsApp.models import Comment
 from SmartNewsApp.forms import CommentForm
 from django.shortcuts import render
 import requests
+import os
+import dotenv
 
 class LoginRequiredMixin(object):
     @method_decorator(login_required())
@@ -32,9 +34,46 @@ class CommentDeleteView(DeleteView):
     success_url = reverse_lazy('func')
 
 def topnews(request):
-    response = requests.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=d7014a6a6e3e4289aaa3a37ca2a42416')
+    apiKey = os.getenv('API_KEY')
+    response = requests.get('https://newsapi.org/v2/top-headlines?country=us&apiKey='+apiKey)
     news = response.json()
     return render(request, 'news.html', {
+        'title': news['articles'][0]['title'],
+        'description': news['articles'][0]['description'],
+        'title2': news['articles'][1]['title'],
+        'description2': news['articles'][1]['description']
+    })
+
+def sources(request):
+    return render(request, 'sources.html')
+
+def newsBBC(request):
+    apiKey = os.getenv('API_KEY')
+    response = requests.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey='+apiKey)
+    news = response.json()
+    return render(request, 'BBC.html', {
+        'title': news['articles'][0]['title'],
+        'description': news['articles'][0]['description'],
+        'title2': news['articles'][1]['title'],
+        'description2': news['articles'][1]['description']
+    })
+
+def newsUSATODAY(request):
+    apiKey = os.getenv('API_KEY')
+    response = requests.get('https://newsapi.org/v2/top-headlines?sources=usa-today&apiKey='+apiKey)
+    news = response.json()
+    return render(request, 'USATODAY.html', {
+        'title': news['articles'][0]['title'],
+        'description': news['articles'][0]['description'],
+        'title2': news['articles'][1]['title'],
+        'description2': news['articles'][1]['description']
+    })
+
+def newsGoogleNews(request):
+    apiKey = os.getenv('API_KEY')
+    response = requests.get('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey='+apiKey)
+    news = response.json()
+    return render(request, 'GoogleNews.html', {
         'title': news['articles'][0]['title'],
         'description': news['articles'][0]['description'],
         'title2': news['articles'][1]['title'],
