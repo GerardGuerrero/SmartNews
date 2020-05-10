@@ -88,6 +88,9 @@ And in order to try how a simple user interact, you can login with these others:
 * *user*: ***ferran***
 * *password*: ***12345verdes***
 
+* *user*: ***roberto***
+* *password*: ***roberto12345678***
+
 
 You can also create new users in all cases.
 
