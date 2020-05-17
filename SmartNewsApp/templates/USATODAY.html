@@ -3,12 +3,22 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<span vocab="http://schema.org/" typeof="NewsArticle">
   <h1>NEWS</h1>
   <h4>Top news of today from USA TODAY:</h4>
   <br></br>
-  <p>Title: <strong>{{ title }}</strong></p>
-  <p>Description: <strong>{{ description }}</strong> </p>
+  <p>
+    <span property="headline">Title: <strong>{{ title }}</strong></span>
+  </p>
+  <p>
+    <span property="articleBody">Description: <strong>{{ description }}</strong></span>
+  </p>
   <br> </br>
-  <p>Title: <strong>{{ title2 }}</strong></p>
-  <p>Description: <strong>{{ description2 }}</strong> </p>
+  <p>
+    <span property="headline">Title: <strong>{{ title2 }}</strong></span>
+  </p>
+  <p>
+    <span property="articleBody">Description: <strong>{{ description2 }}</strong></span> 
+  </p>
+</span>
 {% endblock %}

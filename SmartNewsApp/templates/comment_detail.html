@@ -1,15 +1,24 @@
 {% extends 'baseAPP.html' %}
-
 {% block title %}Home{% endblock %}
-
 {% block content %}
-<h1>
-    {{ comment.description }}
+<span vocab="http://schema.org/" typeof="DiscussionForumPosting">
+
+  <h1>
+      <span property="articleBody">{{ comment.description }}</span>
+  </h1>
+  <h1>
+      <span property="author">Comment done by: {{ comment.user }}</span>
+  </h1>
+  <h1>
+      <span property="datePublished">{{ comment.date }}</span>
+  </h1>
+  <h1>
     {% if user == comment.user %}
         (<a href="{% url 'comment_edit' comment.id %}"><button>edit</button></a>)
     {% endif %}
     {% if user == comment.user %}
         (<a href="{% url 'delete_comment' comment.id %}"><button>delete</button></a>)
     {% endif %}
-</h1>
+  </h1>
+</span>
 {% endblock %}
