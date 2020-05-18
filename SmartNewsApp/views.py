@@ -40,8 +40,16 @@ def topnews(request):
     return render(request, 'news.html', {
         'title': news['articles'][0]['title'],
         'description': news['articles'][0]['description'],
+        'author': news['articles'][0]['author'],
+        'publisher': news['articles'][0]['source']['name'],
+        'date': news['articles'][0]['publishedAt'],
+        'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
-        'description2': news['articles'][1]['description']
+        'description2': news['articles'][1]['description'],
+        'date2': news['articles'][1]['publishedAt'],
+        'author2': news['articles'][1]['author'],
+        'publisher2': news['articles'][1]['source']['name'],
+        'image2': news['articles'][1]['urlToImage']
     })
 
 def sources(request):
@@ -54,8 +62,16 @@ def newsBBC(request):
     return render(request, 'BBC.html', {
         'title': news['articles'][0]['title'],
         'description': news['articles'][0]['description'],
+        'author': news['articles'][0]['author'],
+        'publisher': news['articles'][0]['source']['name'],
+        'date': news['articles'][0]['publishedAt'],
+        'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
-        'description2': news['articles'][1]['description']
+        'description2': news['articles'][1]['description'],
+        'date2': news['articles'][1]['publishedAt'],
+        'author2': news['articles'][1]['author'],
+        'publisher2': news['articles'][1]['source']['name'],
+        'image2': news['articles'][1]['urlToImage']
     })
 
 def newsUSATODAY(request):
@@ -65,8 +81,16 @@ def newsUSATODAY(request):
     return render(request, 'USATODAY.html', {
         'title': news['articles'][0]['title'],
         'description': news['articles'][0]['description'],
+        'author': news['articles'][0]['author'],
+        'publisher': news['articles'][0]['source']['name'],
+        'date': news['articles'][0]['publishedAt'],
+        'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
-        'description2': news['articles'][1]['description']
+        'description2': news['articles'][1]['description'],
+        'date2': news['articles'][1]['publishedAt'],
+        'author2': news['articles'][1]['author'],
+        'publisher2': news['articles'][1]['source']['name'],
+        'image2': news['articles'][1]['urlToImage']
     })
 
 def newsGoogleNews(request):
@@ -76,6 +100,13 @@ def newsGoogleNews(request):
     return render(request, 'GoogleNews.html', {
         'title': news['articles'][0]['title'],
         'description': news['articles'][0]['description'],
+        'author': news['articles'][0]['author'],
+        'date': news['articles'][0]['publishedAt'],
+        'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
-        'description2': news['articles'][1]['description']
+        'description2': news['articles'][1]['description'],
+        'date2': news['articles'][1]['publishedAt'],
+        'author2': news['articles'][1]['author'],
+        'publisher2': news['articles'][1]['source']['name'],
+        'image2': news['articles'][1]['urlToImage']
     })
