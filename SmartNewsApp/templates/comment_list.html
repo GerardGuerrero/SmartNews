@@ -8,7 +8,7 @@
 <ul>
     {% for comment in latest_comment_list %}
         <li><a href="{% url 'comment_detail' comment.id %}">
-            {{ comment.description }}</a></li>
+            {{ comment.title }}</a></li>
     {% empty %}<li>Sorry, no comments registered yet.</li>
     {% endfor %}
 </ul>

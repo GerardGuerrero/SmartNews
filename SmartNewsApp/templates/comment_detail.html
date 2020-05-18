@@ -2,15 +2,20 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <span vocab="http://schema.org/" typeof="DiscussionForumPosting">
-
   <h1>
-      <span property="articleBody">{{ comment.description }}</span>
+    <span property="headline">Title: {{ comment.title }}</span>
   </h1>
   <h1>
-      <span property="author">Comment done by: {{ comment.user }}</span>
+    <span property="articleBody">{{ comment.description }}</span>
   </h1>
   <h1>
-      <span property="datePublished">{{ comment.date }}</span>
+    <span property="author">Comment done by: {{ comment.user }}</span>
+  </h1>
+  <h1>
+    <span property="publisher" typeof="Person"><span property="name">Publisher: {{ comment.user }}</span></span>
+  </h1>
+  <h1>
+    <span property="datePublished">{{ comment.date }}</span>
   </h1>
   <h1>
     {% if user == comment.user %}

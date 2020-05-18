@@ -18,6 +18,7 @@ class Country(models.Model):
     country_code = models.CharField(max_length=25)
 
 class Comment(models.Model):
+    title = models.TextField(default="title")
     description = models.TextField()
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     date = models.DateField(default=date.today)
