@@ -13,6 +13,7 @@ from django.shortcuts import render
 import requests
 import os
 import dotenv
+from datetime import date
 
 class LoginRequiredMixin(object):
     @method_decorator(login_required())
@@ -42,11 +43,11 @@ def topnews(request):
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'publisher': news['articles'][0]['source']['name'],
-        'date': news['articles'][0]['publishedAt'],
+        'date': date.today(),
         'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
         'description2': news['articles'][1]['description'],
-        'date2': news['articles'][1]['publishedAt'],
+        'date2': date.today(),
         'author2': news['articles'][1]['author'],
         'publisher2': news['articles'][1]['source']['name'],
         'image2': news['articles'][1]['urlToImage']
@@ -64,11 +65,11 @@ def newsBBC(request):
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'publisher': news['articles'][0]['source']['name'],
-        'date': news['articles'][0]['publishedAt'],
+        'date': date.today(),
         'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
         'description2': news['articles'][1]['description'],
-        'date2': news['articles'][1]['publishedAt'],
+        'date2': date.today(),
         'author2': news['articles'][1]['author'],
         'publisher2': news['articles'][1]['source']['name'],
         'image2': news['articles'][1]['urlToImage']
@@ -83,11 +84,11 @@ def newsUSATODAY(request):
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'publisher': news['articles'][0]['source']['name'],
-        'date': news['articles'][0]['publishedAt'],
+        'date': date.today(),
         'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
         'description2': news['articles'][1]['description'],
-        'date2': news['articles'][1]['publishedAt'],
+        'date2': date.today(),
         'author2': news['articles'][1]['author'],
         'publisher2': news['articles'][1]['source']['name'],
         'image2': news['articles'][1]['urlToImage']
@@ -101,11 +102,11 @@ def newsGoogleNews(request):
         'title': news['articles'][0]['title'],
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
-        'date': news['articles'][0]['publishedAt'],
+        'date': date.today(),
         'image': news['articles'][0]['urlToImage'],
         'title2': news['articles'][1]['title'],
         'description2': news['articles'][1]['description'],
-        'date2': news['articles'][1]['publishedAt'],
+        'date2': date.today(),
         'author2': news['articles'][1]['author'],
         'publisher2': news['articles'][1]['source']['name'],
         'image2': news['articles'][1]['urlToImage']
