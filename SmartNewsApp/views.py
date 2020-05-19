@@ -39,7 +39,7 @@ def topnews(request):
     response = requests.get('https://newsapi.org/v2/top-headlines?country=us&apiKey='+apiKey)
     news = response.json()
     return render(request, 'news.html', {
-        'title': news['articles'][0]['title'],
+        'title': news['articles'][0]['title'][:105],
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'publisher': news['articles'][0]['source']['name'],
@@ -63,7 +63,7 @@ def newsBBC(request):
     response = requests.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey='+apiKey)
     news = response.json()
     return render(request, 'BBC.html', {
-        'title': news['articles'][0]['title'],
+        'title': news['articles'][0]['title'][:105],
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'publisher': news['articles'][0]['source']['name'],
@@ -84,7 +84,7 @@ def newsUSATODAY(request):
     response = requests.get('https://newsapi.org/v2/top-headlines?sources=usa-today&apiKey='+apiKey)
     news = response.json()
     return render(request, 'USATODAY.html', {
-        'title': news['articles'][0]['title'],
+        'title': news['articles'][0]['title'][:105],
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'publisher': news['articles'][0]['source']['name'],
@@ -105,7 +105,7 @@ def newsGoogleNews(request):
     response = requests.get('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey='+apiKey)
     news = response.json()
     return render(request, 'GoogleNews.html', {
-        'title': news['articles'][0]['title'],
+        'title': news['articles'][0]['title'][:105],
         'description': news['articles'][0]['description'],
         'author': news['articles'][0]['author'],
         'date': date.today(),
