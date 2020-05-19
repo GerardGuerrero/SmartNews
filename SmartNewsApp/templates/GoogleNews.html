@@ -8,8 +8,13 @@
   <h4>Top news of today from Google News:</h4>
   <br></br>
   <div typeof="NewsArticle">
+    <p> An article consumed from:
+      <a property="mainEntityOfPage" href="https://newsapi.org">
+        <span property="name">News API</span>
+      </a>
+    </p>
     <p>
-      <span property="headline">Title: <strong>{{ title }}</strong></span>
+      <span property="headline"><strong>{{ title }}</strong></span>
     </p>
     <p>
       <span property="articleBody">Description: <strong>{{ description }}</strong></span>
@@ -26,11 +31,19 @@
     <p>
       <span property="datePublished">Published on: <strong>{{ date }}</strong></span>
     </p>
+    <p>
+      <span property="dateModified">Modified on: <strong>{{ dateModified }}</strong></span>
+    </p>
   </div>
   <br> </br>
   <div typeof="NewsArticle">
+    <p> An article consumed from:
+      <a property="mainEntityOfPage" href="https://newsapi.org">
+        <span property="name">News API</span>
+      </a>
+    </p>
     <p>
-      <span property="headline">Title: <strong>{{ title2 }}</strong></span>
+      <span property="headline"><strong>{{ title2 }}</strong></span>
     </p>
     <p>
       <span property="articleBody">Description: <strong>{{ description2 }}</strong></span>
@@ -46,6 +59,9 @@
     </p>
     <p>
       <span property="datePublished">Published on: <strong>{{ date2 }}</strong></span>
+    </p>
+    <p>
+      <span property="dateModified">Modified on: <strong>{{ dateModified2 }}</strong></span>
     </p>
   </div>
 </span>
