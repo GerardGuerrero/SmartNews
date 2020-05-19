@@ -21,6 +21,7 @@ class Comment(models.Model):
     title = models.TextField(default="title")
     description = models.TextField()
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+    dateModified = models.DateField(default=date.today)
     date = models.DateField(default=date.today)
     def get_absolute_url(self):
         return reverse('comment_detail', kwargs={'pk': self.pk})
